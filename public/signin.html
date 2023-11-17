@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Signin</title>
+    <link rel="icon" href="icon.jpg" />
+    <style>
+        body {
+            font-family: 'Lobster', cursive;
+            background: url('https://source.unsplash.com/1200x800/?fashion') center/cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 350px;
+            position: relative;
+        }
+
+        h1 {
+            color: #D35400;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #2C3E50;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #BDC3C7;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button {
+            background: #E74C3C;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #C0392B;
+        }
+
+        #loginSuccess {
+            color: #27AE60;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        /* Additional Styles for Fashion Theme */
+        ::placeholder {
+            color: #95A5A6;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form" onsubmit="return login()">
+        <h1>Login</h1>
+        <div>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div>
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <div id="buttons-row">
+            <button type="submit" id="send">Login</button>
+        </div>
+        <div id="loginSuccess" style="display: none;">Login successfully!</div>
+    </form>
+
+    <script>
+        function login() {
+            // Simulating a login process
+            // You can replace this with your actual login logic
+            document.getElementById("loginSuccess").style.display = "block";
+            return false; // Prevents the form from submitting
+        }
+    </script>
+</body>
+
+</html>
